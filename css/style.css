@@ -180,7 +180,6 @@ body {
     padding: 0 20px;
 }
 
-/* Шапка */
 .header {
     background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -247,7 +246,6 @@ body {
     transition: all 0.3s;
 }
 
-/* Герой секция */
 .hero {
     padding: 150px 0 80px;
     background-color: var(--light-color);
@@ -310,13 +308,11 @@ body {
 }
 
 .hero__image {
-    flex: 1 1 320px;
-    min-width: 220px;
-    max-width: 420px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 150px;
+    width: 50%;
+    max-width: 600px;
 }
 
 .hero__image img {
@@ -328,7 +324,6 @@ body {
     box-shadow: 0 4px 32px rgba(44,62,80,0.08);
 }
 
-/* Секции */
 .section-title {
     font-family: var(--font-heading);
     font-size: 36px;
@@ -367,7 +362,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Избранные работы */
 .featured__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -398,7 +392,6 @@ body {
     text-align: center;
 }
 
-/* Портфолио */
 .portfolio {
     padding: 150px 0 80px;
 }
@@ -495,7 +488,6 @@ body {
     color: #666;
 }
 
-/* Контакты */
 .contacts {
     padding: 150px 0 80px;
 }
@@ -573,7 +565,6 @@ body {
     min-height: 150px;
 }
 
-/* Подвал */
 .footer {
     background-color: var(--primary-color);
     color: white;
@@ -600,4 +591,91 @@ body {
 .footer .social-link:hover {
     background-color: white;
     color: var(--primary-color);
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .hero__image {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 50px;
+    }
+    
+    .about__content, .contacts__content {
+        flex-direction: column;
+    }
+    
+    .portfolio-slider {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav__list {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s;
+    }
+    
+    .nav__list.active {
+        left: 0;
+    }
+    
+    .nav__item {
+        margin: 15px 0;
+    }
+    
+    .burger {
+        display: flex;
+    }
+    
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .hero__title {
+        font-size: 36px;
+    }
+    
+    .hero__subtitle {
+        font-size: 20px;
+    }
+    
+    .featured__grid, .portfolio__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .portfolio-slider {
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .featured__grid, .portfolio__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio__categories {
+        flex-wrap: wrap;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
 }
