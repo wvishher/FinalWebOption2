@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Елена Ковалева - профессиональный графический дизайнер и иллюстратор. Создание логотипов, фирменного стиля и цифровых иллюстраций.">
+    <meta name="keywords" content="графический дизайн, иллюстрация, брендинг, логотип, дизайнер">
+    <meta property="og:title" content="Елена Ковалева | Графический дизайнер">
+    <meta property="og:description" content="Профессиональный графический дизайнер и иллюстратор">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <title>Елена Ковалева | Графический дизайнер</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
@@ -14,17 +20,17 @@
         <div class="container">
             <div class="header__inner">
                 <a href="index.html" class="logo">EK Design</a>
-                <nav class="nav">
+                <nav class="nav" role="navigation" aria-label="Главное меню">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="index.html" class="nav__link active">Главная</a></li>
+                        <li class="nav__item"><a href="index.html" class="nav__link active" aria-current="page">Главная</a></li>
                         <li class="nav__item"><a href="portfolio.html" class="nav__link">Портфолио</a></li>
                         <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
                     </ul>
-                    <div class="burger">
+                    <button class="burger" aria-label="Открыть меню" aria-expanded="false">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </div>
+                    </button>
                 </nav>
             </div>
         </div>
@@ -40,7 +46,7 @@
                     <a href="portfolio.html" class="btn animate-on-scroll">Посмотреть работы</a>
                 </div>
                 <div class="hero__image animate-on-scroll">
-                    <img src="images/designer.jpg" alt="Графический дизайнер">
+                    <img src="images/designer.jpg" alt="Елена Ковалева - графический дизайнер" width="500" height="600" loading="lazy">
                 </div>
             </div>
         </section>
@@ -74,15 +80,15 @@
                 <h2 class="section-title animate-on-scroll">Избранные работы</h2>
                 <div class="featured__grid">
                     <a href="portfolio.html" class="featured__item animate-on-scroll">
-                        <img src="images/work1.jpg" alt="Работа 1">
+                        <img src="images/work1.jpg" alt="Брендинг для кафе - пример работы" width="400" height="300" loading="lazy">
                         <h3>Брендинг для кафе</h3>
                     </a>
                     <a href="portfolio.html" class="featured__item animate-on-scroll">
-                        <img src="images/work2.jpg" alt="Работа 2">
+                        <img src="images/work2.jpg" alt="Упаковка косметики - пример работы" width="400" height="300" loading="lazy">
                         <h3>Упаковка косметики</h3>
                     </a>
                     <a href="portfolio.html" class="featured__item animate-on-scroll">
-                        <img src="images/work3.jpg" alt="Работа 3">
+                        <img src="images/work3.jpg" alt="Иллюстрации для книги - пример работы" width="400" height="300" loading="lazy">
                         <h3>Иллюстрации для книги</h3>
                     </a>
                 </div>
@@ -95,9 +101,9 @@
             <div class="footer__content">
                 <div class="footer__copyright">© 2025 EK Design. Все права защищены.</div>
                 <div class="footer__social">
-                    <a href="#" class="social-link">Telegram</a>
-                    <a href="#" class="social-link">VK</a>
-                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link" aria-label="Telegram" target="_blank" rel="noopener noreferrer">Telegram</a>
+                    <a href="#" class="social-link" aria-label="VK" target="_blank" rel="noopener noreferrer">VK</a>
+                    <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
                 </div>
             </div>
         </div>
