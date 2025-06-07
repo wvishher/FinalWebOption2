@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Елена Ковалева</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">EK Design</a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                        <li class="nav__item"><a href="portfolio.html" class="nav__link active">Портфолио</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    </ul>
+                    <div class="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="portfolio">
+            <div class="container">
+                <h1 class="section-title animate-on-scroll">Мои работы</h1>
+                <div class="portfolio__categories animate-on-scroll">
+                    <button class="category-btn active" data-category="all">Все работы</button>
+                    <button class="category-btn" data-category="branding">Брендинг</button>
+                    <button class="category-btn" data-category="packaging">Упаковка</button>
+                    <button class="category-btn" data-category="illustration">Иллюстрации</button>
+                </div>
+
+                <!-- Swiper слайдер -->
+                <div class="swiper-container portfolio-slider animate-on-scroll">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/slide1.jpg" alt="Проект 1">
+                            <div class="slide-content">
+                                <h3>Брендинг для кофейни "Aroma"</h3>
+                                <p>Полный фирменный стиль для сети кофеен в Москве</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/slide2.jpg" alt="Проект 2">
+                            <div class="slide-content">
+                                <h3>Упаковка органической косметики</h3>
+                                <p>Дизайн линейки упаковки для бренда натуральной косметики</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/slide3.jpg" alt="Проект 3">
+                            <div class="slide-content">
+                                <h3>Иллюстрации для детской книги</h3>
+                                <p>Серия иллюстраций для издания сказок народов мира</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+                <div class="portfolio__grid">
+                    <div class="portfolio__item animate-on-scroll" data-category="branding">
+                        <img src="images/work1.jpg" alt="Брендинг кафе">
+                        <div class="portfolio__item-content">
+                            <h3>Брендинг кафе "Vibes"</h3>
+                            <p>Логотип, фирменный стиль, меню</p>
+                            <a href="#" class="btn btn--small">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item animate-on-scroll" data-category="packaging">
+                        <img src="images/work2.jpg" alt="Упаковка косметики">
+                        <div class="portfolio__item-content">
+                            <h3>Упаковка косметики "Frau Botanika"</h3>
+                            <p>Дизайн линейки уходовой косметики</p>
+                            <a href="#" class="btn btn--small">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item animate-on-scroll" data-category="illustration">
+                        <img src="images/work3.jpg" alt="Иллюстрации для книги">
+                        <div class="portfolio__item-content">
+                            <h3>Иллюстрации для книги</h3>
+                            <p>Серия иллюстраций для сборника поэзии</p>
+                            <a href="#" class="btn btn--small">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item animate-on-scroll" data-category="branding">
+                        <img src="images/work4.jpg" alt="Фирменный стиль">
+                        <div class="portfolio__item-content">
+                            <h3>Фирменный стиль студии йоги</h3>
+                            <p>Логотип, полиграфия, соцсети</p>
+                            <a href="#" class="btn btn--small">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item animate-on-scroll" data-category="packaging">
+                        <img src="images/work5.jpg" alt="Упаковка чая">
+                        <div class="portfolio__item-content">
+                            <h3>Упаковка чайной коллекции</h3>
+                            <p>Дизайн упаковки для премиального чая</p>
+                            <a href="#" class="btn btn--small">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item animate-on-scroll" data-category="illustration">
+                        <img src="images/work6.jpg" alt="Персонажи">
+                        <div class="portfolio__item-content">
+                            <h3>Персонажи для мобильной игры</h3>
+                            <p>Серия персонажей в стиле flat design</p>
+                            <a href="#" class="btn btn--small">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__copyright">© 2025 EK Design. Все права защищены.</div>
+                <div class="footer__social">
+                    <a href="#" class="social-link">Telegram</a>
+                    <a href="#" class="social-link">VK</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/swiper-init.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Елена Ковалева</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">EK Design</a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                        <li class="nav__item"><a href="portfolio.html" class="nav__link">Портфолио</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link active">Контакты</a></li>
+                    </ul>
+                    <div class="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contacts">
+            <div class="container">
+                <h1 class="section-title animate-on-scroll">Свяжитесь со мной</h1>
+                <div class="contacts__content">
+                    <div class="contacts__info animate-on-scroll">
+                        <h2>Контактная информация</h2>
+                        <p><strong>Email:</strong> hello@ekdesign.ru</p>
+                        <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+                        <p><strong>Адрес:</strong> Москва, ул. Дизайнеров, 15</p>
+                        
+                        <div class="contacts__social">
+                            <h3>Я в соцсетях:</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link">VK</a>
+                                <a href="#" class="social-link">Telegram</a>
+                                <a href="#" class="social-link">Instagram</a>
+                                <a href="#" class="social-link">ITikTok</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form animate-on-scroll">
+                        <h2>Форма обратной связи</h2>
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Тема</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__copyright">© 2025 EK Design. Все права защищены.</div>
+                <div class="footer__social">
+                    <a href="#" class="social-link">Telegram</a>
+                    <a href="#" class="social-link">VK</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
