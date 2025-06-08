@@ -1,4 +1,4 @@
-
+/* Анимации */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -52,7 +52,7 @@
     }
 }
 
-
+/* Специфичные анимации для элементов */
 .hero__title {
     animation-delay: 0.2s;
 }
