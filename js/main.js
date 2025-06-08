@@ -3,37 +3,57 @@ document.addEventListener('DOMContentLoaded', function() {
     const burger = document.querySelector('.burger');
     const navList = document.querySelector('.nav__list');
     
-    burger.addEventListener('click', function() {
-        this.classList.toggle('active');
-        navList.classList.toggle('active');
-    });
+    if (burger && navList) {
+        const toggleMenu = () => {
+            const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+            burger.setAttribute('aria-expanded', !isExpanded);
+            burger.classList.toggle('active');
+            navList.classList.toggle('active');
+        };
+
+        burger.addEventListener('click', toggleMenu);
+        
+        // Поддержка клавиатуры
+        burger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+    }
     
     // Закрытие меню при клике на ссылку
     const navLinks = document.querySelectorAll('.nav__link');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            burger.classList.remove('active');
-            navList.classList.remove('active');
+        link.addEventListener('click', () => {
+            if (burger && navList) {
+                burger.classList.remove('active');
+                navList.classList.remove('active');
+                burger.setAttribute('aria-expanded', 'false');
+            }
         });
     });
     
     // Анимации при прокрутке
     const animateElements = document.querySelectorAll('.animate-on-scroll');
     
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animated');
-                observer.unobserve(entry.target);
-            }
+    if (animateElements.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '50px'
         });
-    }, {
-        threshold: 0.1
-    });
-    
-    animateElements.forEach(element => {
-        observer.observe(element);
-    });
+        
+        animateElements.forEach(element => {
+            observer.observe(element);
+        });
+    }
     
     // Фильтрация работ в портфолио
     const categoryBtns = document.querySelectorAll('.category-btn');
@@ -56,12 +76,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-    });
+    }
     
     // Обработка формы
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Здесь можно добавить AJAX-запрос или другую логику отправки
